@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+    <!-- 解决ListView中item点击事件和item中Button点击事件冲突问题 -->
+    <!--在ListView的适配器中的布局文件中添加：-->
+    <!--（1）在布局文件的根元素上中添加属性android:descendantFocusability="blocksDescendants"-->
+    <!--（2）在Button中添加属性android:focusable="false"和android:clickable="true"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1"
+        android:background="@drawable/z_white_gray">
+
+        <ImageButton
+            android:id="@+id/imgBtn_add"
+            style="@android:style/Widget.Holo.ImageButton"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/add"
+            android:background="@drawable/z_colorless_gray"
+            android:clickable="true"
+            android:focusable="false"/>     <!-- 不强制获取item的焦点，否则item的点击事件就没用了-->
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <!--歌名-->
+            <TextView
+                android:id="@+id/tv_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我们不一样"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <!--歌手-歌名-->
+            <TextView
+                android:id="@+id/tv_singer_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="大壮 - 我们不一样"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--播放时长-->
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:text="00:00"
+                android:textSize="14dp"
+                android:minWidth="60dp"
+                android:paddingTop="13dp"
+                android:paddingRight="10dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

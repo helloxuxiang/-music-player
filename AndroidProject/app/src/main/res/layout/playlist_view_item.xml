@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
+    <!-- 解决ListView中item点击事件和item中Button点击事件冲突问题 -->
+    <!--在ListView的适配器中的布局文件中添加：-->
+    <!--（1）在布局文件的根元素上中添加属性android:descendantFocusability="blocksDescendants"-->
+    <!--（2）在Button中添加属性android:focusable="false"和android:clickable="true"-->
+
+    <LinearLayout
+        android:id="@+id/linearlayout_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/z_white_gray"
+        android:orientation="horizontal"
+        android:padding="5dp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/tv_list_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="25dp"
+            android:textColor="#000000"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+        <LinearLayout
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <!--歌名-->
+            <TextView
+                android:id="@+id/tv_playlist_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="我们不一样"
+                android:textColor="#000000"
+                android:textSize="18dp" />
+
+            <!--歌手-歌名-->
+            <TextView
+                android:id="@+id/tv_playlist_singer_song"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="大壮 - 我们不一样"
+                android:textSize="14dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="vertical"
+            android:paddingRight="10dp">
+
+            <ImageButton
+                android:id="@+id/img_delete"
+                style="@android:style/Widget.DeviceDefault.ImageButton"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/z_colorless_gray"
+                app:srcCompat="@drawable/delete" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

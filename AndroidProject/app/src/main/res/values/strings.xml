@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">藏音阁</string>
+    <string name="user_login">用户登录</string>
+    <string name="user_zhuce">用户注册</string>
+    <string name="about_app">关于APP</string>
+
+    <drawable name="clr_gray">#8E8E8E</drawable>
+    <drawable name="clr_blue">#0066cc</drawable>
+    <drawable name="clr_white">#FFFFFF</drawable>
+    <drawable name="clr_red">#FF0000</drawable>
+    <drawable name="clr_drakred">#930000</drawable>
+    <drawable name="clr_dark_blue">#2828FF</drawable>
+    <drawable name="clr_colorless">#00000000</drawable>
+</resources>

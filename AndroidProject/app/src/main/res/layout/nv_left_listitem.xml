@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal" android:layout_width="270dp"
+    android:layout_height="50dp"
+    android:background="@drawable/z_white_gray"
+    >
+
+    <ImageView
+        android:id="@+id/img_menuIcon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_vertical"
+        android:padding="10dp"
+        app:srcCompat="@drawable/news" />
+
+    <TextView
+        android:id="@+id/tv_menuItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="我的消息"
+        android:layout_gravity="center_vertical"
+        android:textSize="16dp"
+        android:textColor="#000000"/>
+</LinearLayout>
